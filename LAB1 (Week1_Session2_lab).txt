@@ -1,0 +1,96 @@
+/*
+Assignment 1
+Create a class Student in Student.java then add member variables  studentName, collegeName of type String
+Add a member variable StudentID of type int
+Make all the member variables as private
+Add a main method. Add print a message "Successful"
+Compile and Run
+ */
+
+public class Student {
+    private String studentName;
+    private String collegeName;
+    private int studentID;
+
+    public static void main(String[] args) {
+        System.out.println("Successful");
+    }
+}
+
+--------------------------------------------------------------------------------
+
+/*
+Create a new class Employee
+Add member variables: id & age of type ont, name of type String and isPermanent of type boolean
+Now assign values 35.5 to age; see the error message
+How can you avoid this error? Correct the error by casting
+Make all the members protected
+Add a main method to it. Print message "Successfully Started"
+Compile the class
+ */
+
+public class Employee {
+    protected int id;
+    protected int age;
+    protected String name;
+    protected boolean isPermanent;
+
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+
+        emp.id = 101;
+        //emp.age = 35.5;
+        emp.age = (int)35.5;
+        emp.name = "Akash";
+        emp.isPermanent = true;
+
+        System.out.println("Successfully Started");
+    }
+}
+
+---------------------------------------------------------------------------------
+
+/*
+Create a class Person
+Add member variables name as String, age and Salary as int
+Initialize the member variable along with declaration
+Now put the previous Person class in a package com.anudip.learning
+Add a main method aAdd a print message "Test Successful:
+RUn the class after compilation
+Modify the class paths to see the error messages on the console
+ */
+
+public class Person {
+    String name = "Akash";
+    int age = 21;
+    int Salary = 5000000;
+
+    public static void main(String[] args) {
+        System.out.println("Test Successful");
+    }
+}
+
+---------------------------------------------------------------------------------
+
+/*
+Create a class Rectangle
+Add a member variable width and height of type double
+Create enum Color with values RED, GREEN, BLUE
+Create a member variable boxColor of type Color.
+Add a main method
+In main method just print the enum Color BLUE
+Compile and run the class
+ */
+
+
+public class Rectangle {
+    double height;
+    double width;
+    enum Color{
+        RED, GREEN, BLUE;
+    }
+    Color boxColor;
+    public static void main(String[] args) {
+        System.out.println(Color.BLUE);
+    }
+}

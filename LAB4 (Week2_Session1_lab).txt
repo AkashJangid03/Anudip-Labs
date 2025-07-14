@@ -1,0 +1,60 @@
+/*
+1. Write a program to enter P,T (principal and time) and calculate simple interest. Use the Scanner class for taking inputs from the console. Users will enter the principal amount and time (in years).
+Create an if-else statement and modify the interest rate based on the principal amount. If the amount>10000 then the interest rate is 10%. If the amount is between 10000 and 5000 then make the interest rate 8%. For any amount below 5000 the interest rate should be 5%
+ */
+
+import java.util.Scanner;
+public class SimpleInterestCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the Principal Amount: ");
+        double principal = sc.nextDouble();
+        System.out.print("Enter Time in the year: ");
+        double time = sc.nextDouble();
+        double rate;
+
+        if (principal > 10000){
+            rate = 10.0;
+        } else if (principal >= 5000 && principal <=10000){
+            rate = 8.0;
+        } else {
+            rate = 5.0;
+        }
+        double interest = (principal * rate * time) / 100;
+        System.out.println("Interest rate: "+rate+"%");
+        System.out.println("Simple Interest: "+interest);
+    }
+}
+
+------------------------------------------------------------------------------------
+
+/*
+3. Write a program which calculates the monthly bill amount for a internet subscriber based on the following logic:
+ - If the total data consumed is less than 10GB then bill amount will be Rs.300. (basic charge)
+ - If the data is consumed between 10GB & 30GB then bill amount will be basic charge + 5*)total GB consumed-10). That means consumer will be charged Rs5 for each additional GB consumed over 10GB.
+ - If the consumer consumes more than 30GB then The bill amount=400+3*(Total GB consumed-30). That means the consumer has to pay addition Rs 3 for each GB above 30GB.
+Use if-else block to solve the problem
+ */
+
+import java.util.Scanner;
+
+public class InternetBillCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the data used in GB: ");
+        int dataUsed = sc.nextInt();
+        int bill;
+
+        if(dataUsed < 10) {
+            bill = 300;
+        } else if (dataUsed <= 30){
+            bill = 300 + 5*(dataUsed-10);
+        } else {
+            bill = 300 + 3*(dataUsed-30);
+        }
+
+        System.out.println("Total Bill Amount: "+bill);
+    }
+}

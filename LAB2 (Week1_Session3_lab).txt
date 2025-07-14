@@ -1,0 +1,107 @@
+/*
+Write a java program named Car
+The Car class should have the following attributes:
+    make(string), model(string), year(string) and price(int)
+The car class should have a constructor that takes all the attributes
+Add a main method to instantiate car objects
+The program should allow the user to create and display objects of each Car Class
+ */
+package Week1_Session3_lab.Assignment1;
+import java.util.Scanner;
+public class Car {
+    String make;
+    String model;
+    String year;
+    int price;
+
+    public Car(String make, String model, String year, int price) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.price = price;
+    }
+
+    public void displayCarInfo() {
+        System.out.println("Car Details:");
+        System.out.println("Make: "+make);
+        System.out.println("Model: "+model);
+        System.out.println("Year: "+year);
+        System.out.println("Price: "+price);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Number of cars to enter: ");
+        int count = sc.nextInt();
+        sc.nextLine();
+
+        Car[] cars = new Car[count];
+
+        for (int i=0; i<count; i++){
+            System.out.println("Enter the details for car "+(i+1));
+            System.out.print("Make: ");
+            String make = sc.nextLine();
+            System.out.print("Model: ");
+            String model = sc.nextLine();
+            System.out.print("Year: ");
+            String year = sc.nextLine();
+            System.out.print("Price :");
+            int price = sc.nextInt();
+            sc.nextLine();
+            cars[i] = new Car(make, model, year, price);
+        }
+        System.out.println("CAR INFORMATION");
+        for (Car car : cars) {
+            car.displayCarInfo();
+        }
+    }
+}
+
+----------------------------------------------------------------------------------
+
+/*
+Write a java program that demonstrates method overloading by creating a class called Calculator
+Add three methods called add()
+The first add() methods should take two int variables as arguments and return their sum as int
+The second add() method should take two doubles as arguments and return their sum as int
+The third add() method should take two doubles as arguments and return their sum as double
+The program should allow the user to display the results of each method
+ */
+
+package Week1_Session3_lab.Assignment2;
+import java.util.Scanner;
+public class Calculator{
+    int add(int a, int b){
+        return a+b;
+    }
+    int add(double a, double b){
+        return (int)(a+b);
+    }
+    double add(double a, double b, boolean useDouble){
+        return a+b;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Calculator cal = new Calculator();
+
+        System.out.print("Enter two integers: ");
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        System.out.println("Sum (int): " + cal.add(num1, num2));
+
+        System.out.println("Enter two doubles: ");
+        double d1 = sc.nextDouble();
+        double d2 = sc.nextDouble();
+        System.out.println("Sum (int): " + cal.add(d1, d2));
+
+        System.out.print("Enter two doubles (double result): ");
+        double d3 = sc.nextDouble();
+        double d4 = sc.nextDouble();
+        System.out.println("Sum (as double): " + cal.add(d3, d4, true));
+    }
+}
+
+
+-----------------------------------------------------------------------------------
