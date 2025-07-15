@@ -1,4 +1,5 @@
 /*
+Assignment 1
 Write a java program named Car
 The Car class should have the following attributes:
     make(string), model(string), year(string) and price(int)
@@ -61,6 +62,7 @@ public class Car {
 ----------------------------------------------------------------------------------
 
 /*
+Assignment 2
 Write a java program that demonstrates method overloading by creating a class called Calculator
 Add three methods called add()
 The first add() methods should take two int variables as arguments and return their sum as int
