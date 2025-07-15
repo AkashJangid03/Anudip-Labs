@@ -20,6 +20,7 @@ public class Student {
 --------------------------------------------------------------------------------
 
 /*
+Assignment 2
 Create a new class Employee
 Add member variables: id & age of type ont, name of type String and isPermanent of type boolean
 Now assign values 35.5 to age; see the error message
@@ -51,6 +52,7 @@ public class Employee {
 ---------------------------------------------------------------------------------
 
 /*
+Assignment 3
 Create a class Person
 Add member variables name as String, age and Salary as int
 Initialize the member variable along with declaration
@@ -73,6 +75,7 @@ public class Person {
 ---------------------------------------------------------------------------------
 
 /*
+Assignmenet 4
 Create a class Rectangle
 Add a member variable width and height of type double
 Create enum Color with values RED, GREEN, BLUE
